@@ -11,21 +11,23 @@
 }
 
 .clients {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-
-  > .company {
-    margin-right: 30px;
-    margin-bottom: 30px;
+  @media screen and(max-width:768px) {
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
-  }
-  > .company:nth-child(2n) {
-    margin-right: 0px;
-    margin-bottom: 0px;
-  }
-  > .company:nth-child(n + 4) {
-    margin-bottom: 0px;
+
+    > .company {
+      margin-right: 30px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    > .company:nth-child(2n) {
+      margin-right: 0px;
+      margin-bottom: 0px;
+    }
+    > .company:nth-child(n + 4) {
+      margin-bottom: 0px;
+    }
   }
 }
 
