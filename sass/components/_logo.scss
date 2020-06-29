@@ -1,0 +1,17 @@
+@import "../utils/variables";
+.logo {
+  font-family: $font-logo;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+
+  color: $primary-text-color;
+
+  transition: color 250ms $cubic-bezier;
+  .accent {
+    color: $accent-color;
+  }
+  &:focus {
+    color: $accent-color;
+  }
+}
