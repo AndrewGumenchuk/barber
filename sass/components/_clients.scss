@@ -1,22 +1,40 @@
 @import "../utils/variables";
 
+.section-title {
+  margin-top: 0px;
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+}
+
 .clients {
   display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+
   > .company {
-    display: flex;
     margin-right: 30px;
+    margin-bottom: 30px;
     text-align: center;
   }
-  > .company:last-child {
+  > .company:nth-child(2n) {
     margin-right: 0px;
+    margin-bottom: 0px;
+  }
+  > .company:nth-child(n + 4) {
+    margin-bottom: 0px;
   }
 }
+
 .client-block {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  width: 170px;
+  width: 210px;
   height: 90px;
   border-radius: 4px;
 

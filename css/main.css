@@ -1,3 +1,28 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -8,14 +33,6 @@ html {
 *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 body {
@@ -42,10 +59,13 @@ img {
 }
 
 .logo {
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.16;
   color: #212121;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -59,25 +79,29 @@ img {
   color: #2196f3;
 }
 
-.main-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media screen and (min-width: 768px) {
+  .main-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
-.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (min-width: 768px) {
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .site-nav {
@@ -124,70 +148,51 @@ img {
   background-color: #2196f3;
 }
 
-.contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.contact .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-right: 30px;
-}
-
-.contact .link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: #757575;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contact .link:hover, .contact .link:focus {
-  color: #2196f3;
-}
-
-.contact .link-icon {
-  fill: currentColor;
-  margin-right: 10px;
+@media screen and (min-width: 768px) {
+  .contact .item {
+    display: block;
+    margin-left: 84px;
+    margin-top: 21px;
+    margin-bottom: 10px;
+  }
+  .contact .item:last-child {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .contact .link {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: #757575;
+    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .contact .link:hover, .contact .link:focus {
+    color: #2196f3;
+  }
+  .contact .link-icon {
+    fill: currentColor;
+    margin-right: 8px;
+  }
 }
 
 .hero-title {
   display: block;
   margin-top: 0px;
-  margin-bottom: 56px;
-  padding-top: 200px;
+  margin-bottom: 30px;
+  padding-top: 118px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.6;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
 }
 
 .overlay {
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-size: cover;
@@ -515,22 +520,12 @@ textarea {
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
-.features {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .features .item {
-  width: 270px;
-  margin-right: 30px;
+  margin-bottom: 30px;
 }
 
 .features .item:last-child {
-  margin-right: 0px;
+  margin-bottom: 0;
 }
 
 .features-block {
@@ -544,7 +539,7 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 30px;
-  width: 270px;
+  width: 450px;
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
@@ -556,20 +551,12 @@ textarea {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.section-title {
-  margin-top: 0px;
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .section-subtitle {
+  text-align: center;
   margin-top: 0px;
   margin-bottom: 10px;
   font-weight: 700;
@@ -579,15 +566,11 @@ textarea {
 }
 
 .section-text {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 14px;
   line-height: 1.71;
   color: #757575;
-}
-
-.section.border {
-  border-bottom: 1px solid #ececec;
 }
 
 .section-title {
@@ -733,22 +716,37 @@ textarea {
   color: #757575;
 }
 
+.section-title {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+}
+
 .clients {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.clients > .company {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-right: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   text-align: center;
 }
 
-.clients > .company:last-child {
+.clients > .company {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.clients > .company:nth-child(2n) {
   margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.clients > .company:nth-child(n + 4) {
+  margin-bottom: 0px;
 }
 
 .client-block {
@@ -761,7 +759,7 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 170px;
+  width: 210px;
   height: 90px;
   border-radius: 4px;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -776,25 +774,15 @@ textarea {
 }
 
 .footer {
+  text-align: center;
   background-color: #2f303a;
-}
-
-.footer-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .footer .logo {
   display: inline-block;
-  margin-bottom: 10px;
-  padding-top: 48px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  padding: 0px;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #ffffff;
@@ -806,7 +794,7 @@ textarea {
 
 .footer-contact .adress {
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   margin-top: 0px;
   font-size: 14px;
   line-height: 1.71;
@@ -815,7 +803,7 @@ textarea {
 
 .footer-contact .mail {
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   margin-top: 0px;
   font-size: 14px;
   line-height: 1.71;
@@ -824,7 +812,7 @@ textarea {
 
 .footer-contact .phone {
   display: block;
-  margin-bottom: 28px;
+  margin-bottom: 60px;
   margin-top: 0px;
   font-size: 14px;
   line-height: 1.71;
@@ -835,6 +823,10 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 60px;
 }
 
 .social-icon > .footer-icon {
@@ -869,9 +861,13 @@ textarea {
   background-color: #2196f3;
 }
 
+.footer {
+  text-align: center;
+}
+
 .footer .title {
   display: inline-block;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
   margin-top: 0px;
   font-weight: 700;
   font-size: 14px;
@@ -881,12 +877,7 @@ textarea {
 }
 
 .footer-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-bottom: 60px;
   padding: 10px 32px;
   border-radius: 4px;
   border: 0px;
@@ -900,23 +891,21 @@ textarea {
 }
 
 .footer-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .footer-input {
+  margin-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  padding-right: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 358px;
+  width: 450px;
   height: 50px;
-  margin-right: 12px;
-  padding-left: 12px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 16px;
@@ -930,27 +919,6 @@ textarea {
 .footer-mail {
   margin-left: 10px;
   fill: #ffffff;
-}
-
-.footer .copyright {
-  text-align: center;
-  font-size: 12px;
-  line-height: 2;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.container .copyright {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .portfolio.page-header {

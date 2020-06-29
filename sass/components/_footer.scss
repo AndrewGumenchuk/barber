@@ -1,16 +1,15 @@
 @import "../utils/variables";
 
 .footer {
+  text-align: center;
   background-color: $footer-color;
-  &-main {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-  }
+
   .logo {
     display: inline-block;
-    margin-bottom: 10px;
-    padding-top: 48px;
+
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding: 0px;
 
     transition: color 250ms $cubic-bezier;
 
@@ -24,7 +23,7 @@
 .footer-contact {
   .adress {
     display: block;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
     margin-top: 0px;
 
     font-size: 14px;
@@ -34,7 +33,7 @@
   }
   .mail {
     display: block;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
     margin-top: 0px;
 
     font-size: 14px;
@@ -44,7 +43,7 @@
   }
   .phone {
     display: block;
-    margin-bottom: 28px;
+    margin-bottom: 60px;
     margin-top: 0px;
 
     font-size: 14px;
@@ -56,6 +55,10 @@
 
 .social-icon {
   display: flex;
+  justify-content: center;
+
+  margin-bottom: 60px;
+
   > .footer-icon {
     margin-right: 10px;
   }
@@ -84,9 +87,10 @@
 }
 
 .footer {
+  text-align: center;
   .title {
     display: inline-block;
-    margin-bottom: 21px;
+    margin-bottom: 20px;
     margin-top: 0px;
 
     font-weight: 700;
@@ -97,9 +101,7 @@
     color: $background-color;
   }
   &-button {
-    display: flex;
-    align-items: center;
-
+    margin-bottom: 60px;
     padding: 10px 32px;
     border-radius: 4px;
     border: 0px;
@@ -114,17 +116,21 @@
     background-color: $accent-color;
   }
   &-form {
-    display: flex;
-    align-items: center;
     margin: 0;
     padding: 0;
+
+    text-align: center;
   }
   &-input {
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    padding-right: 0;
+
     box-sizing: border-box;
-    width: 358px;
+    width: 450px;
     height: 50px;
-    margin-right: 12px;
-    padding-left: 12px;
 
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -141,24 +147,4 @@
     margin-left: 10px;
     fill: $background-color;
   }
-}
-
-.footer .copyright {
-  text-align: center;
-
-  font-size: 12px;
-  line-height: 2;
-
-  color: $copyright-color;
-}
-
-.container .copyright {
-  display: flex;
-  justify-content: center;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
