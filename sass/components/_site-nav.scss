@@ -1,46 +1,63 @@
 @import "../utils/variables";
 
-.site-nav {
-  display: flex;
-  margin-left: 86px;
-  .item + .item {
-    margin-left: 50px;
-  }
-  .link {
+.page-header {
+  position: relative;
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  text-align: center;
+  background-color: $background-color;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  &.is-open {
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-
-    transition: color 250ms $cubic-bezier;
-
-    color: $primary-text-color;
-    &:hover,
-    &:focus,
-    &:active {
-      color: $accent-color;
-    }
-    &.current {
-      position: relative;
-
-      color: $accent-color;
-    }
   }
 }
 
-.link.current::after {
-  position: absolute;
-  bottom: 0px;
-  border-radius: 2px;
+//   text-align: center;
+//   // display: flex;
+//   // margin-left: 86px;
+//   // .item + .item {
+//   //   margin-left: 50px;
+//   // }
 
-  content: " ";
+.link {
   display: block;
-  width: 100%;
-  height: 4px;
+  padding-bottom: 8px;
 
-  background-color: $accent-color;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color 250ms $cubic-bezier;
+
+  color: $primary-text-color;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $accent-color;
+  }
+}
+.link.current {
+  position: relative;
+
+  color: $accent-color;
+
+  &::after {
+    position: absolute;
+    bottom: 0px;
+    border-radius: 2px;
+
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 4px;
+
+    background-color: $accent-color;
+  }
 }
