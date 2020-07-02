@@ -1,6 +1,15 @@
 @import "../utils/variables";
 
-.section-title {
+.section.work {
+  display: block;
+  padding-bottom: 94px;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.work-title {
   margin-top: 0px;
   margin-bottom: 50px;
 
@@ -12,13 +21,11 @@
 
 .works {
   display: flex;
+  margin: -15px;
   .item {
     position: relative;
 
-    margin-right: 30px;
-  }
-  .item:last-child {
-    margin-right: 0px;
+    margin: 15px;
   }
 }
 
