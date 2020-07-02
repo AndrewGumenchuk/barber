@@ -95,21 +95,18 @@
 }
 
 .menu-button {
-  position: absolute;
   display: inline-flex;
   margin: 0;
   padding: 0;
-  top: 0;
-  right: 0;
   border: none;
   background-color: transparent;
-}
-.menu-button .icon-cross {
-  display: none;
-}
-.menu-button.is-open .icon-cross {
-  display: block;
-}
-.menu-button.is-open .icon-menu {
-  display: none;
+  .icon-cross {
+    display: none;
+  }
+  &.is-open .icon-cross {
+    display: block;
+  }
+  &.is-open .icon-menu {
+    display: none;
+  }
 }
