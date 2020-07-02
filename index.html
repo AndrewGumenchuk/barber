@@ -65,17 +65,18 @@
 
     <main>
       <!--Hero-->
-      <section class="hero">
+      
+      <section class="hero container">
         <h1 class="hero-title">
           эффективные решения <br />
           для вашего бизнеса
         </h1>
         <button class="button-hero" data-modal-open>Заказать услугу</button>
       </section>
-
+    
       <!--Features-->
       <div class="container">
-        <section class="section features"></section>
+        <section class="section-features">
           <!-- <h2 class="section-title">Приемущества</h2> -->
           <ul class="features-card">
             <li class="item">
@@ -84,8 +85,8 @@
                   <use href="./images/sprite.svg#icon-antenna"></use>
                 </svg>
               </div>
-              <h3 class="section-subtitle">Внимание к деталям</h3>
-              <p class="section-text">
+              <h3 class="subtitle">Внимание к деталям</h3>
+              <p class="text">
                 Идейные соображения, а также начало повседневной работы по
                 формированию позиции.
               </p>
@@ -96,8 +97,8 @@
                   <use href="./images/sprite.svg#icon-clock"></use>
                 </svg>
               </div>
-              <h3 class="section-subtitle">Пунктуальность</h3>
-              <p class="section-text">
+              <h3 class="subtitle">Пунктуальность</h3>
+              <p class="text">
                 Задача организации, в особенности же рамки и место обучения
                 кадров влечет за собой.
               </p>
@@ -108,8 +109,8 @@
                   <use href="./images/sprite.svg#icon-diagram"></use>
                 </svg>
               </div>
-              <h3 class="section-subtitle">Планирование</h3>
-              <p class="section-text">
+              <h3 class="subtitle">Планирование</h3>
+              <p class="text">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает.
               </p>
@@ -120,8 +121,8 @@
                   <use href="./images/sprite.svg#icon-astronaut"></use>
                 </svg>
               </div>
-              <h3 class="section-subtitle">Современные технологии</h3>
-              <p class="section-text">
+              <h3 class="subtitle">Современные технологии</h3>
+              <p class="text">
                 Значимость этих проблем настолько очевидна, что реализация
                 плановых заданий.
               </p>
@@ -164,16 +165,19 @@
       <!--Team-->
       <section class="section our">
         <div class="container">
-          <h2 class="section-title">Наша команда</h2>
+          <h2 class="title">Наша команда</h2>
           <ul class="team">
-            <li class="item">
-              <img
-                class="team-foto"
-                src="./images/John_Smith.jpg"
-                alt="John Smith на фото"
-              />
+
+            <!-- ntcn -->
+            <li class="card">
+              <picture>
+                <source srcset="./images/img1_270.jpg 1x, ./images/img1_270_2x.jpg 2x " media="(min-width: 1200px)" />
+                <source srcset="./images/img1_354.jpg 1x, ./images/img1_354_2x.jpg 2x" media="(min-width: 768px)" />
+                <img srcset="./images/img1_450.jpg 1x, ./images/img1_450_2x.jpg 2x " src="./images/img1_450.jpg " alt="фотографія" width="100%" />
+              </picture>
+          
               <div class="team-cards">
-                <h3 class="section-heading">John Smith</h3>
+                <h3 class="section-heading">Николай Кучеренко</h3>
                 <p class="section-headline">Product Designer</p>
                 <ul class="team-social">
                   <li class="team-link">
@@ -212,14 +216,16 @@
               </div>
             </li>
 
-            <li class="item">
-              <img
-                class="team-foto"
-                src="./images/Marta_Stewart.jpg"
-                alt="Marta Stewart на фото"
-              />
+            <li class="card">
+              <picture>
+                <source srcset="./images/img2_270.jpg 1x, ./images/img2_270_2x.jpg 2x " media="(min-width: 1200px)" />
+                <source srcset="./images/img2_354.jpg 1x, ./images/img2_354_2x.jpg 2x" media="(min-width: 768px)" />
+                <img srcset="./images/img2_450.jpg 1x, ./images/img2_450_2x.jpg 2x " src="./images/img2_450.jpg " alt="фотографія"
+                  width="100%" />
+              </picture>
+              
               <div class="team-cards">
-                <h3 class="section-heading">Marta Stewart</h3>
+                <h3 class="section-heading">Ольга Иванова</h3>
                 <p class="section-headline">Frontend Developer</p>
                 <ul class="team-social">
                   <li class="team-link">
@@ -254,14 +260,16 @@
               </div>
             </li>
 
-            <li class="item">
-              <img
-                class="team-foto"
-                src="./images/Robert_Jakis.jpg"
-                alt="Robert Jakis на фото"
-              />
+            <li class="card">
+              <picture>
+                <source srcset="./images/img3_270.jpg 1x, ./images/img3_270_2x.jpg 2x " media="(min-width: 1200px)" />
+                <source srcset="./images/img3_354.jpg 1x, ./images/img3_354_2x.jpg 2x" media="(min-width: 768px)" />
+                <img srcset="./images/img3_450.jpg 1x, ./images/img3_450_2x.jpg 2x " src="./images/img3_450.jpg " alt="фотографія"
+                  width="100%" />
+              </picture>
+
               <div class="team-cards">
-                <h3 class="section-heading">Robert Jakis</h3>
+                <h3 class="section-heading">Андрей Шевченко</h3>
                 <p class="section-headline">Marketing</p>
                 <ul class="team-social">
                   <li class="team-link">
@@ -300,14 +308,16 @@
               </div>
             </li>
 
-            <li class="item">
-              <img
-                class="team-foto"
-                src="./images/Martin_Doe.jpg"
-                alt="Martin Doe на фото"
-              />
+            <li class="card">
+            <picture>
+              <source srcset="./images/img4_270.jpg 1x, ./images/img4_270_2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/img4_354.jpg 1x, ./images/img4_354_2x.jpg 2x" media="(min-width: 768px)" />
+              <img srcset="./images/img4_450.jpg 1x, ./images/img4_450_2x.jpg 2x " src="./images/img4_450.jpg " alt="фотографія"
+                width="100%" />
+            </picture>
+
               <div class="team-cards">
-                <h3 class="section-heading">Martin Doe</h3>
+                <h3 class="section-heading">Иван Николаев</h3>
                 <p class="section-headline">UI Designer</p>
                 <ul class="team-social">
                   <li class="team-link">
