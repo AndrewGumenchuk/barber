@@ -1,28 +1,5 @@
 @import "../utils/variables";
 
-.button-portfolio {
-  padding: 6px 22px;
-
-  border: 10px;
-  border-radius: 4px;
-
-  font-family: inherit;
-
-  transition: color 250ms $cubic-bezier, background-color 250ms $cubic-bezier;
-
-  color: $primary-text-color;
-  background-color: $secondary-background-color;
-
-  &:last-child {
-    margin-right: 0px;
-  }
-  &:hover,
-  &:focus {
-    color: $background-color;
-    background-color: $accent-color;
-  }
-}
-
 .button:focus {
   color: $accent-color;
 }
