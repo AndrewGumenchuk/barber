@@ -477,15 +477,15 @@
 
     <!--Modal-->
 
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden container" data-modal>
       <div class="modal">
         <button class="exit-modal" data-modal-close  >
+          <svg width="11px" height="11px">
+            <use href="./images/sprite.svg#icon-cross"></use>
+          </svg>
         </button>
-
+        <b class="form-text">Оставьте свои данные, мы вам перезвоним</b>
         <form class="js-speaker-form" autocomplete="off">
-          <div class="form-text">
-            <b>Оставьте свои данные, мы вам перезвоним</b>
-          </div>
           <div class="form-field">
             <input type="text"  class="form-input" name="name" id="name" placeholder=" ">
             <label for="name" class="form-label">Имя</label>
