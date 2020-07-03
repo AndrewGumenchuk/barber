@@ -14,7 +14,7 @@
     padding-bottom: 94px;
   }
 }
-.cards {
+.filters .cards {
   max-width: 450px;
   margin: 15px;
 
@@ -26,40 +26,11 @@
   }
 }
 
-.card-content {
-  padding: 20px, 24px;
+.card-foto {
+  position: relative;
+  overflow: hidden;
 
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-
-  background-color: $background-color;
-
-  .title {
-    margin-top: 0;
-    margin-bottom: 4px;
-
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-
-    @media screen and (max-width: 1199px) {
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-  }
-  .text {
-    margin: 0px;
-
-    font-size: 16px;
-    line-height: 1.87;
-
-    color: $secondary-text-color;
-  }
-
-  .description {
+  .description-text {
     position: absolute;
     display: block;
 
@@ -77,7 +48,7 @@
     background-color: rgba(33, 150, 243, 0.9);
     color: $background-color;
 
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms $cubic-bezier;
 
     @media screen and (min-width: 768px) {
       padding: 49px 24px;
@@ -88,27 +59,61 @@
   }
 }
 
+.card-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+
+  background-color: $background-color;
+  .title {
+    margin-top: 0;
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+
+    color: $primary-text-color;
+
+    @media screen and (max-width: 1199px) {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  .text {
+    margin: 0px;
+
+    font-size: 16px;
+    line-height: 1.87;
+
+    color: $secondary-text-color;
+  }
+}
+
 .card-link {
   display: block;
 
-  &:focus .text-text,
-  &:hover .text-text {
+  &:focus .description-text,
+  &:hover .description-text {
     transform: translateY(-100%);
     opacity: 1;
   }
 }
 
 .shadows {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms $cubic-bezier;
 
   &:focus,
   &:hover {
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
       0px 1px 1px rgba(0, 0, 0, 0.12);
   }
-}
-
-.card-foto {
-  position: relative;
-  overflow: hidden;
 }
