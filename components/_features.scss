@@ -19,7 +19,7 @@ section {
   color: #303030;
 }
 
-.sub-title::before {
+.sub-title::after {
   content: "";
   margin-right: 20px;
 }
@@ -75,12 +75,16 @@ section {
 .features-benefits {
   display: flex;
   flex-wrap: wrap;
-  align-self: end;
+  align-items: flex-start;
   margin: -15px;
 }
 
 .features-benefits .blocks {
   margin: 15px;
+}
+
+.features-benefits .blocks::nth-child(2n) {
+  margin-top: 35px;
 }
 
 .blocks-numbers {
